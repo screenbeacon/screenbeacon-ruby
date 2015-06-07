@@ -17,7 +17,7 @@ module Screenbeacon
         :name => "Screenbeacon",
         :created_at => "2015-01-15T06:32:24Z",
         :updated_at =>"2015-06-06T23:35:33Z",
-        :image_url: "https://screenbeacon.s3.amazonaws.com/projects/project/13/thumb_avatar_2x.png",
+        :image_url => "https://screenbeacon.s3.amazonaws.com/projects/project/13/thumb_avatar_2x.png",
         :active_alerts_count => 1,
         :owner_avatar_url => "https://screenbeacon.s3.amazonaws.com/uploads/user/avatar/2/retina_jordan-humphreys.jpg",
         :position => 0,
