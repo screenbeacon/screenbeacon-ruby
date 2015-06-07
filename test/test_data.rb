@@ -37,7 +37,7 @@ module Screenbeacon
         project_id: 14,
         state: "failed",
         last_run_at: "2015-06-06T23:33:58Z",
-        active_alert: test_alert({project: test_project, test_version: test_version})
+        active_alert: test_alert({project: test_project, test_version: test_version}),
         source: nil,
         md5: "70c584f3b0ddba3f7e70663ed8cc61ff",
         times_run: 447,
@@ -124,11 +124,21 @@ module Screenbeacon
       [test_version, test_version, test_version]
     end
 
-    def test_invalid_api_key_error
+    def test_invalid_api_id_error
       {
         :error => {
           :type => "invalid_request_error",
           :message => "Invalid API ID provided: invalid"
+        }
+      }
+    end
+
+    def test_missing_id_error
+      {
+        :error => {
+          :param => "id",
+          :type => "invalid_request_error",
+          :message => "Missing id"
         }
       }
     end

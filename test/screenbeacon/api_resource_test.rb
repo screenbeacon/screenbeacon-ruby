@@ -2,7 +2,7 @@
 require File.expand_path('../../test_helper', __FILE__)
 
 module Screenbeacon
-  class ApiResourceTest < Test::Unit::TestCase
+  class ApiResourceTest < ::Test::Unit::TestCase
     should "creating a new APIResource should not fetch over the network" do
       @mock.expects(:get).never
       Screenbeacon::Project.new("someid")
@@ -60,7 +60,7 @@ module Screenbeacon
       response = test_response(test_invalid_api_id_error, 401)
       assert_raises Screenbeacon::AuthenticationError do
         @mock.expects(:get).once.raises(RestClient::ExceptionWithResponse.new(response, 401))
-        test_invalid_api_id_error.retrieve("failing_project")
+        Screenbeacon::Project.retrieve("failing_project")
       end
     end
 
@@ -75,7 +75,7 @@ module Screenbeacon
         assert_equal(401, e.http_status)
         assert_equal(true, !!e.http_body)
         assert_equal(true, !!e.json_body[:error])
-        assert_equal(test_invalid_api_key_error[:error], e.json_body[:error])
+        assert_equal(test_invalid_api_id_error[:error], e.json_body[:error])
       end
     end
   end

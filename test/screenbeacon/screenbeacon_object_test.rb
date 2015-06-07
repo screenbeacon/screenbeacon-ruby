@@ -1,7 +1,7 @@
 require File.expand_path('../../test_helper', __FILE__)
 
 module Screenbeacon
-  class ScreenbeaconObjectTest < Test::Unit::TestCase
+  class ScreenbeaconObjectTest < ::Test::Unit::TestCase
     should "implement #respond_to correctly" do
       obj = Screenbeacon::ScreenbeaconObject.construct_from({ :id => 1, :foo => 'bar' })
       assert obj.respond_to?(:id)
