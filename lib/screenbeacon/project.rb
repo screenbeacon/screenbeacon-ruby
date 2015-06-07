@@ -14,10 +14,19 @@ module Screenbeacon
       refresh_from(response, opts)
     end
 
+    def run(opts={})
+      response, opts = request(:post, run_url, {}, opts)
+      refresh_from(response, opts)
+    end
+
     private
 
     def resolve_all_url
       url + '/resolve_all'
+    end
+
+    def run_url
+      url + '/run'
     end
 
   end
