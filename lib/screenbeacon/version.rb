@@ -1,3 +1,3 @@
 module Screenbeacon
-  VERSION = '1.21.0'
+  VERSION = '0.1.0'
 end
