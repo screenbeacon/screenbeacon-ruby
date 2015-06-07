@@ -1,0 +1,4 @@
+/screenbeacon-*.gem
+/Gemfile.lock
+.rvmrc
+Gemfile.lock
