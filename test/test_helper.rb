@@ -1,6 +1,3 @@
-require 'codeclimate-test-reporter'
-CodeClimate::TestReporter.start
-
 require 'screenbeacon'
 require 'test/unit'
 require 'mocha/setup'
