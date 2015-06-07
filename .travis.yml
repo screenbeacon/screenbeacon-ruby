@@ -20,3 +20,7 @@ matrix:
       gemfile: gemfiles/yajl.gemfile
 
 sudo: false
+
+branches:
+  only:
+    - master
