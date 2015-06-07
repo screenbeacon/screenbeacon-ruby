@@ -24,3 +24,6 @@ sudo: false
 branches:
   only:
     - master
+
+addons:
+  code_climate: 27c67395673ed8b89ce84de4c89fe0cc9f397147daaae4e583796ef9f5b67640
