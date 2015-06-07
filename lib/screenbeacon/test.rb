@@ -5,6 +5,11 @@ module Screenbeacon
     include Screenbeacon::APIOperations::Delete
     include Screenbeacon::APIOperations::List
 
+    def resolve(opts={})
+      response, opts = request(:patch, resolve_url, {}, opts)
+      refresh_from(response, opts)
+    end
+
     def run(opts={})
       response, opts = request(:patch, run_url, {}, opts)
       refresh_from(response, opts)
@@ -16,6 +21,10 @@ module Screenbeacon
     end
 
     private
+
+    def resolve_url
+      url + '/resolve'
+    end
 
     def run_url
       url + '/run'
