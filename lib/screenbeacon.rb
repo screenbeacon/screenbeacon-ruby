@@ -10,29 +10,29 @@ require 'rest-client'
 require 'json'
 
 # Version
-relative 'screenbeacon/version'
+require 'screenbeacon/version'
 
 # API operations
-relative 'screenbeacon/api_operations/create'
-relative 'screenbeacon/api_operations/update'
-relative 'screenbeacon/api_operations/delete'
-relative 'screenbeacon/api_operations/list'
-relative 'screenbeacon/api_operations/request'
+require 'screenbeacon/api_operations/create'
+require 'screenbeacon/api_operations/update'
+require 'screenbeacon/api_operations/delete'
+require 'screenbeacon/api_operations/list'
+require 'screenbeacon/api_operations/request'
 
 # Resources
-relative 'screenbeacon/util'
-relative 'screenbeacon/screenbeacon_object'
-relative 'screenbeacon/api_resource'
-relative 'screenbeacon/project'
-relative 'screenbeacon/test'
-relative 'screenbeacon/alert'
+require 'screenbeacon/util'
+require 'screenbeacon/screenbeacon_object'
+require 'screenbeacon/api_resource'
+require 'screenbeacon/project'
+require 'screenbeacon/test'
+require 'screenbeacon/alert'
 
 # Errors
-relative 'screenbeacon/errors/screenbeacon_error'
-relative 'screenbeacon/errors/api_error'
-relative 'screenbeacon/errors/api_connection_error'
-relative 'screenbeacon/errors/invalid_request_error'
-relative 'screenbeacon/errors/authentication_error'
+require 'screenbeacon/errors/screenbeacon_error'
+require 'screenbeacon/errors/api_error'
+require 'screenbeacon/errors/api_connection_error'
+require 'screenbeacon/errors/invalid_request_error'
+require 'screenbeacon/errors/authentication_error'
 
 module Screenbeacon
   DEFAULT_CA_BUNDLE_PATH = File.dirname(__FILE__) + '/data/ca-certificates.crt'
