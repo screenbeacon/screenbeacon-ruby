@@ -1,3 +1,5 @@
+# Screenbeacon Ruby Libary {<img src="https://travis-ci.org/screenbeacon/screenbeacon-ruby.svg?branch=master" alt="Build Status" />}[https://travis-ci.org/screenbeacon/screenbeacon-ruby]
+
 == Documentation
 
 {Screenbeacon API Docs}[https://screenbeacon.readme.io]
